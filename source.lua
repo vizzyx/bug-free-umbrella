@@ -58,6 +58,9 @@ local function main()
     addButtonToFrame(frame, "Brick Admin BETA", function()
         loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Brick-Admin-BETA-12105",true))()
     end)
+    addButtonToFrame(frame, "Dex", function()
+        loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Dex%20Explorer.txt"))()
+        end)
 end
 
 -- Execute the main function
