@@ -21,7 +21,7 @@ local function createGUI()
 
     Frame.Parent = ScreenGui
     Frame.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
-    Frame.Size = UDim2.new(0, 250, 0, 600)
+    Frame.Size = UDim2.new(0, 250, 0, 400)
     Frame.Position = UDim2.new(0.5, -125, 0.5, -150)
     Frame.Active = true
     Frame.Draggable = true
