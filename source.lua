@@ -61,7 +61,7 @@ local function main()
     addButtonToFrame(frame, "Dex", function()
         loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Dex%20Explorer.txt"))()
     end)
-    addButtonToFrame(frame, "Basic WS/JP Changer", function()
+    addButtonToFrame(frame, "Exec-in-exec", function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/vizzyx/bug-free-umbrella/main/internal/wsjp.lua"))()
     end)
 end
