@@ -11,7 +11,7 @@ button.Text = "main."
 button.Parent = screenGui
 
 local beta = Instance.new("TextButton")
-beta.Size = UDim2.new(0, 200, 0, 50)
+beta.Size = UDim2.new(0, 200, 0, 250)
 beta.Position = UDim2.new(0.5, -100, 0.5, -25)
 beta.Text = "beta."
 beta.Parent = screenGui
