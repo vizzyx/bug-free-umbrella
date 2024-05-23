@@ -29,33 +29,53 @@ local Tab1 = Window:Tab("Scripts")
 local Section1 = Tab1:Section(
     "Admin", 
     "Left"
+)  -- Added missing parenthesis here
 
 Section1:Button({
     Title = "Infinite Yield",
     Callback = function()
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+        local success, err = pcall(function()
+            loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+        end)
+        if not success then
+            warn("Error loading Infinite Yield: "..err)
+        end
     end
 })
-
 
 Section1:Button({
     Title = "Nameless Admin",
     Callback = function()
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source'))()
+        local success, err = pcall(function()
+            loadstring(game:HttpGet('https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source'))()
+        end)
+        if not success then
+            warn("Error loading Nameless Admin: "..err)
+        end
     end
-}) 
+})
 
 Section1:Button({
     Title = "Dex Explorer",
     Callback = function()
-        loadstring(game:HttpGetAsync("https://pastebin.com/raw/fPP8bZ8Z"))()
+        local success, err = pcall(function()
+            loadstring(game:HttpGetAsync("https://pastebin.com/raw/fPP8bZ8Z"))()
+        end)
+        if not success then
+            warn("Error loading Dex Explorer: "..err)
+        end
     end
-}) 
+})
 
 Section1:Button({
     Title = "Executionist (lightweight script executor)",
     Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/vizzyx/bug-free-umbrella/main/internal/wsjp.lua"))()
+        local success, err = pcall(function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/vizzyx/bug-free-umbrella/main/internal/wsjp.lua"))()
+        end)
+        if not success then
+            warn("Error loading Executionist: "..err)
+        end
     end
 })
   
