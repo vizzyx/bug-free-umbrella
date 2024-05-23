@@ -4,12 +4,12 @@ local Library = Ui
 local LoadTime = tick()
 
 local Loader = Library.CreateLoader(
-    "viz's ui library", 
+    "viz's script library", 
     Vector2.new(300, 300)
 )
 
 local Window = Library.Window(
-    "viz ui lib - beta", 
+    "viz script lib - beta", 
     Vector2.new(500, 620)
 )
 
@@ -20,7 +20,7 @@ Window.SendNotification(
 )
 
 Window.Watermark(
-    "Text Here"
+    "viz's script lib"
 )
 -- Window:Visible = true
 
