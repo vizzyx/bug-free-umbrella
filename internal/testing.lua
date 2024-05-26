@@ -14,8 +14,8 @@ local function notif()
 	Content = "Loaded script.",
 	Image = "rbxassetid://4483345998",
 	Time = 5
-})
-end)
+    })
+end
 
 local Tab = Window:MakeTab({
 	Name = "Universal",
@@ -32,7 +32,7 @@ Tab:AddButton({
 	Callback = function()
       	loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
         notif()
-  	end)    
+  	end
 })
 
 Tab:AddButton({
@@ -40,7 +40,7 @@ Tab:AddButton({
 	Callback = function()
       	loadstring(game:HttpGet('https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source'))()
         notif()
-  	end)    
+  	end
 })
 
 Tab:AddButton({
@@ -48,11 +48,11 @@ Tab:AddButton({
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/vizzyx/bug-free-umbrella/main/internal/wsjp.lua"))()
         notif()
-    end)
+    end
 })
 
 Tab:AddBind({
-	Name = "Bind",
+	Name = "Destroy GUI",
 	Default = Enum.KeyCode.J,
 	Hold = false,
 	Callback = function()
