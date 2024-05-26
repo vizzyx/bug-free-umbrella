@@ -15,7 +15,7 @@ local function notif()
 	Image = "rbxassetid://4483345998",
 	Time = 5
 })
-end
+end)
 
 local Tab = Window:MakeTab({
 	Name = "Universal",
