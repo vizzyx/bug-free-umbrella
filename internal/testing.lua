@@ -1,42 +1,63 @@
-local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/vozoid/ui-libraries/main/drawing/void/source.lua"))()
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "viz's script hub", HidePremium = false, SaveConfig = false, ConfigFolder = "OrionTest", IntroEnabled = true, IntroText = "viz's script hub"})
 
-local watermark = library:Watermark("watermark | 60 fps | v4.20 | dev")
--- watermark:Set("Watermark Set")
-watermark:Hide() -- toggles watermark
+OrionLib:MakeNotification({
+	Name = "viz scripts",
+	Content = "Loaded script hub.",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
 
-local main = library:Load{
-    Name = "viz scripts or something",
-    SizeX = 600,
-    SizeY = 650,
-    Theme = "Midnight",
-    Extension = "json", -- config file extension
-    Folder = "viz scripts or something" -- config folder name
-}
+local function notif()
+    OrionLib:MakeNotification({
+	Name = "viz scripts",
+	Content = "Loaded script.",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+end
 
--- library.Extension = "txt" (config file extension)
--- library.Folder = "config folder name"
+local Tab = Window:MakeTab({
+	Name = "Universal",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
 
-local tab = main:Tab("Tab")
+local Section = Tab:AddSection({
+	Name = "Administrator"
+})
 
-local section = tab:Section{
-    Name = "Admin",
-    Side = "Left"
-}
+Tab:AddButton({
+	Name = "Infinite Yield",
+	Callback = function()
+      	loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+        notif()
+  	end)    
+})
 
-local label = section:Label("Label")
+Tab:AddButton({
+	Name = "Nameless Admin",
+	Callback = function()
+      	loadstring(game:HttpGet('https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source'))()
+        notif()
+  	end)    
+})
 
---label:Set("Label Set")
+Tab:AddButton({
+    Name = "Executor-in-Executor",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/vizzyx/bug-free-umbrella/main/internal/wsjp.lua"))()
+        notif()
+    end)
+})
 
-section:Button{
-    Name = "Destroy UI",
-    Callback  = function()
-        library:Unload()
-    end
-}
+Tab:AddBind({
+	Name = "Bind",
+	Default = Enum.KeyCode.J,
+	Hold = false,
+	Callback = function()
+		OrionLib:Destroy()
+	end    
+})
 
-section:Button{
-    Name = "Infinite Yield",
-    Callback  = function()
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
-    end
-}
+OrionLib:Init()
