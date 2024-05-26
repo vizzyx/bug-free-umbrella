@@ -54,7 +54,7 @@ Tab:AddButton({
 Tab:AddBind({
 	Name = "Destroy GUI",
 	Default = Enum.KeyCode.J,
-	Hold = false,
+	Hold = true,
 	Callback = function()
 		OrionLib:Destroy()
 	end    
